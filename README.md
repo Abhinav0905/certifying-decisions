@@ -32,6 +32,8 @@ The original simulator, result files and figures are frozen. Their checksums mat
 
 The 15 November release review replayed all 108,000 saved policy rows, checked the full task inventory and recomputed certificate margins, regret, selected aggregates and all 360 paired confidence intervals. The primary `timed_h2` / `static_h2` comparison also reproduced in a fresh run with the pinned dependencies.
 
+**The full Linux x86_64 rerun passed.** GitHub Actions reproduced all raw policy rows, summaries, diagnostics, confidence intervals and numeric plot summaries within tolerance, with a maximum accepted numeric difference of 8.89e-16. See [the Linux report](release/verification-linux-x86_64.json) and [the verified workflow run](https://github.com/Abhinav0905/certifying-decisions/actions/runs/43744120026). Use this tested platform for full reproduction.
+
 **The full simulator is not exactly reproducible across the tested numerical environments.** On macOS ARM64 with Apple's Accelerate BLAS, 48 policy rows changed query order in the secondary `full_order` and `timed_h3` baselines. Two `timed_h3` rows changed whether they certified, in opposite directions. The main pooled coverage count stayed the same. Some secondary costs and intervals changed. The original results have not been replaced.
 
 See [the release review](RELEASE_REVIEW.md) and [the machine-readable report](release/verification-macos-arm64.json). The strict checker fails on these differences. An explicit option accepts only drift assigned to those two secondary methods and their summaries; every difference remains in its report. It does not waive the saved-result replay, provenance or primary-comparison checks.

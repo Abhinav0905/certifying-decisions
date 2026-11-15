@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "policy_rows": 108000,
+  "tasks": 13500,
+  "absolute_tolerance": 1e-10,
+  "relative_tolerance": 1e-10,
+  "compared_output_files": [
+    "all_raw.csv",
+    "balanced_latency_summary.csv",
+    "bound_double_raw.csv",
+    "bound_fivefold_raw.csv",
+    "configuration.json",
+    "family_plot_summary.csv",
+    "latency_double_raw.csv",
+    "latency_quarter_raw.csv",
+    "main_raw.csv",
+    "paired_seed_intervals.csv",
+    "paired_success_diagnostics.json",
+    "sinusoidal_raw.csv",
+    "stress_plot_summary.csv",
+    "summary.csv",
+    "summary.json",
+    "verification.json"
+  ],
+  "comparison": {
+    "values": 3684764,
+    "max_absolute_numeric_difference": 8.881784197001252e-16
+  },
+  "rerun_differences": [],
+  "unexpected_difference_count": 0,
+  "secondary_drift_allowed": true,
+  "original_results_replay": {
+    "rows": 108000,
+    "episodes": 13500,
+    "interval_rows": 360,
+    "maximum_margin_error": 8.881784197001252e-16,
+    "maximum_regret_error": 0.0,
+    "maximum_selected_summary_error": 0.0,
+    "maximum_interval_error": 4.440892098500626e-16,
+    "source_hash_matches": true,
+    "source_sha256": "aa6142fafd5c4ac77b8fea9d2a4169e269f190de94d53bc1119fd4bfda1db444",
+    "initially_certified": 3936,
+    "common_certificates": 5452,
+    "matched_subset": {
+      "calls": {
+        "timed_h2": 0.41434336023477625,
+        "static_h2": 0.4387380777696258,
+        "relative_reduction": 0.05560200668896309
+      },
+      "tool_latency": {
+        "timed_h2": 0.37385977830469286,
+        "static_h2": 0.3923082584561446,
+        "relative_reduction": 0.047025469777394635
+      }
+    },
+    "timed_only_certificates": 17,
+    "static_only_certificates": 44
+  },
+  "experiment_sha256": "aa6142fafd5c4ac77b8fea9d2a4169e269f190de94d53bc1119fd4bfda1db444",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "scope": "Full rerun of the supplied simulator, exact row inventory, numeric output comparisons and separate arithmetic replay. Not an independent simulator implementation or external peer review.",
+  "figures": "All six figure files regenerated; plotted numeric summaries compared. Image bytes are not required to match across platforms."
+}

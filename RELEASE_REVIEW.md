@@ -20,6 +20,8 @@ The policies' implemented forecast functions receive cached observations, coeffi
 
 The source hash is `aa6142fafd5c4ac77b8fea9d2a4169e269f190de94d53bc1119fd4bfda1db444`. The full evidence is in `release/verification-macos-arm64.json`. Its explicit status is `archive_and_primary_passed_secondary_drift`, not an exact full-rerun pass.
 
+A second full check on Linux x86_64 passed with no output mismatches beyond tolerance. All 108,000 policy rows, all numeric summaries, diagnostics and intervals reproduced. The maximum numeric difference was 8.89e-16. `release/verification-linux-x86_64.json` records the result from [GitHub Actions run 43744120026](https://github.com/Abhinav0905/certifying-decisions/actions/runs/43744120026), which tested commit `6aa6f0826a1a0118a521881c096ade6d58b90a60`. The workflow enabled secondary-drift reporting, but the report contained zero differences and returned `passed`. The verifier and experiment source were unchanged after that run; this release adds its report and documentation.
+
 ## Finding: numerical ties affect secondary policies
 
 The original implementation uses raw floating-point values to rank predicted margins and cumulative durations. A mathematically tied value can differ at machine precision across numerical backends. That difference takes precedence over the intended lexicographic tie break.
