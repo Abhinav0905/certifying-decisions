@@ -1,0 +1,140 @@
+READ ONLY NUMERICAL AND IMPLEMENTATION AUDIT
+
+Recorded: 2026-11-13 18:50:57 America/Los_Angeles
+Equivalent UTC time: 2026-11-14 02:50:57 UTC
+
+Scope
+This report records a separate assistant review and numerical replay of the
+synthetic experiment. It is not external peer review, human review, an LLM
+benchmark or a production-system evaluation. The audited experiment source was
+not modified. Replay used the experiment's deterministic task generator and
+Environment implementation. Query schedules, certificate arithmetic, regret,
+selected aggregates and confidence intervals were recomputed separately from
+the recorded CSV rows; the entire simulator was not independently reimplemented.
+
+Source covered by the complete numerical replay
+experiments.py
+SHA256: 3491b97d8a0b0b883fa36c62c3168058e86c7de824016b8089ea0a342e999911
+Recorded NumPy version: 2.3.5
+
+Current delivered source and limited change inspection
+Inspected: 2026-11-13 18:54:41 America/Los_Angeles
+Equivalent UTC time: 2026-11-14 02:54:41 UTC
+Current SHA256:
+aa6142fafd5c4ac77b8fea9d2a4169e269f190de94d53bc1119fd4bfda1db444
+
+The current source adds two items: a two-step forecast verification case and
+paired-success diagnostic output. Removing exactly these additions in memory
+reconstructed the preceding audited SHA256 byte for byte. Task generation,
+policy execution, certificate logic, evaluation, primary summaries and paired
+interval calculations are unchanged. The current provenance hash matches.
+Only the small exact_checks routine was rerun, not the complete simulation or
+full replay. Its output matches verification.json. In the added two-step case,
+initial slack is -0.25, either one-read forecast has slack -0.35, either two-read
+forecast has slack 0.05 within floating-point precision, and the selected first
+read is source zero. This confirms that the forecast search does not discard a
+useful two-read sequence merely because its first read has negative immediate
+gain. The new main paired-success diagnostics match the previous independent
+calculation: 3,936 initial certificates, 5,452 common successes, 17 timed-only
+successes, 44 static-only successes and the reported common-success delays.
+
+Checks performed
+1. Read the complete experiment implementation and its information boundary.
+   Policies receive PolicyInput and a query callback. Their only calls to the
+   callback occur after the corresponding read latency is charged. No future
+   true state enters the forecast functions. The offset construction uses
+   historical cached values to control the initial nominal gap.
+2. Replayed every one of 108,000 policy rows across 13,500 generated episodes.
+   Reconstructed the paid read order, cumulative completion times, returned
+   values, observation timestamps and final execution time. Verified no source
+   was queried twice, calls matched the order, and execution times stayed within
+   the common deadline.
+3. Recomputed every affine comparison lower bound from the reconstructed cache
+   and the source ages at execution. The largest absolute difference from a
+   recorded final margin was 8.881784197001252e-16.
+4. Recomputed action scores at each policy's own execution time. Regret matched
+   every executed row exactly, and invalid-execution flags agreed. Verified
+   every issued certificate met the numerical gate tolerance. Verified that
+   true source values lay within the declared boxes in all correct-bound rows.
+5. Recomputed the following summary fields from raw rows: n, executed,
+   certified, invalid_executed, invalid_certified, execution_coverage,
+   certificate_coverage, calls_per_arrival, latency_per_arrival,
+   total_calls_per_certificate and total_latency_per_certificate.
+   Maximum discrepancy: 0.0. Other summary fields were not separately audited.
+6. Independently recomputed all 360 paired seed-level Student t interval rows.
+   Maximum discrepancy in mean differences or interval endpoints:
+   4.440892098500626e-16. Each comparison used the reported 20 seed groups.
+7. Confirmed that the experiment source hash matched provenance.json.
+8. Checked raw-file row counts: main 48,000; each of five supplementary
+   conditions 12,000; combined all_raw.csv 108,000.
+
+Main comparison and denominators
+There are 6,000 main episodes and eight policies. The policies are paired on
+the same exogenous trajectory within an episode; these are not 48,000
+independent experimental tasks.
+
+The shared gate certifies 3,936/6,000 episodes (65.60%) before any read.
+
+                                    timed_h2          static_h2
+Certified episodes                  5,469             5,496
+Certificate coverage                91.15%            91.60%
+Calls per arriving episode          0.6138333333      0.7636666667
+Tool delay per arriving episode     0.5676013973      0.7355277710
+
+All-arrival mean tool delay falls by 22.83%, but coverage also falls by
+27/6,000 = 0.45 percentage points. The paired seed-level coverage difference is
+-0.0045 with 95% interval [-0.0069418614, -0.0020581386]. The paired tool-delay
+difference is -0.1679263737 with interval [-0.1823481083, -0.1535046391].
+
+There are 5,452 episodes certified by both methods. On this matched-success
+subset, mean tool delay is 0.3738597783 for timed_h2 and 0.3923082585 for
+static_h2, a 4.70254698% reduction. Mean calls are 0.4143433602 versus
+0.4387380778, a 5.56020067% reduction. These are descriptive subset summaries,
+not new confirmatory tests. There are 17 timed-only certificates and 44
+static-only certificates. Thus the larger all-arrival saving includes earlier
+abstention and avoidance of unsuccessful refresh work. It is not an
+equal-completion 22.83% speed improvement.
+
+The ungated no-refresh policy executes all 6,000 main episodes and selects a
+nonoptimal action in 186 (3.10%). All gated methods have zero invalid certified
+actions in the main condition. This is expected under valid drift bounds and
+the shared certificate, not evidence that the refresh heuristic is uniquely
+responsible for correctness.
+
+Material limitations and warnings
+- The experiment tests affine action preference. It contains no action
+  feasibility constraints, reservation protocol, authorization system or
+  atomic commit implementation.
+- Reported latency is simulated cumulative tool delay. Policy computation,
+  language-model execution and intermediate planning time are not charged.
+  The final execution gap is fixed at 0.5 simulated time units.
+- Source observations are sampled at read completion. This does not establish
+  correctness for a tool whose result was sampled earlier but timestamped at
+  receipt. Such a tool needs its real source timestamp in the model.
+- All gated methods use the same current-time certificate and deadline. The
+  static_h2 ablation freezes ages only in its forecast, not in its final gate.
+- At most one read per source is permitted. Claims about coverage apply to
+  that restricted query model. The study assumes serial calls.
+- full_order optimizes the final predicted margin over complete permutations
+  of all five reads, then stops early on the common gate and skips infeasible
+  reads. It is not an optimal refresh-subset policy or an online oracle. In the
+  independent_option family, the fifth source has a common coefficient that
+  cancels in every action comparison; full refresh still includes it.
+- Bound-misspecification conditions reuse latent random draws but regenerate
+  historical observations and the target offset. They are not identical fixed
+  decision instances with only a changed physical rate.
+- The initial margin is deliberately controlled by construction. The generated
+  episodes do not estimate production error frequencies.
+- Drift bounds are known inputs, not empirically calibrated guarantees. Bound
+  violations are a deliberate stress condition and can invalidate certificates.
+- The affine certificate allows numerical margin tolerance 1e-10; an executed
+  action is counted invalid above regret 1e-8. Ideal-arithmetic statements and
+  numerical conventions should be distinguished.
+- Confidence intervals are unadjusted across 360 comparisons. The report does
+  not claim familywise statistical significance across all conditions/slices.
+
+Reproduction
+audit_replay.py reproduces the numerical checks and the matched-subset
+calculations without modifying experiment inputs or outputs. It imports the
+same task generator, as disclosed above. Run it after experiments.py has
+produced outputs/all_raw.csv and the summary files.

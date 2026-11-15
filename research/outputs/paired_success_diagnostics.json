@@ -1,0 +1,80 @@
+[
+  {
+    "condition": "main",
+    "tasks": 6000,
+    "initially_certified": 3936,
+    "shared_successes": 5452,
+    "timed_only_successes": 17,
+    "static_only_successes": 44,
+    "timed_calls_on_shared_successes": 0.41434336023477625,
+    "static_calls_on_shared_successes": 0.4387380777696258,
+    "timed_latency_on_shared_successes": 0.37385977830469286,
+    "static_latency_on_shared_successes": 0.3923082584561446,
+    "interpretation": "The shared-success subset is selected by both algorithms' outcomes; it is a descriptive diagnostic. Primary cost metrics include all arrivals and all abstentions."
+  },
+  {
+    "condition": "latency_quarter",
+    "tasks": 1500,
+    "initially_certified": 1016,
+    "shared_successes": 1432,
+    "timed_only_successes": 0,
+    "static_only_successes": 2,
+    "timed_calls_on_shared_successes": 0.44622905027932963,
+    "static_calls_on_shared_successes": 0.4511173184357542,
+    "timed_latency_on_shared_successes": 0.10382298509653519,
+    "static_latency_on_shared_successes": 0.10320877832597031,
+    "interpretation": "The shared-success subset is selected by both algorithms' outcomes; it is a descriptive diagnostic. Primary cost metrics include all arrivals and all abstentions."
+  },
+  {
+    "condition": "latency_double",
+    "tasks": 1500,
+    "initially_certified": 1016,
+    "shared_successes": 1295,
+    "timed_only_successes": 9,
+    "static_only_successes": 22,
+    "timed_calls_on_shared_successes": 0.29575289575289576,
+    "static_calls_on_shared_successes": 0.31814671814671813,
+    "timed_latency_on_shared_successes": 0.54249222338154,
+    "static_latency_on_shared_successes": 0.5774331698581202,
+    "interpretation": "The shared-success subset is selected by both algorithms' outcomes; it is a descriptive diagnostic. Primary cost metrics include all arrivals and all abstentions."
+  },
+  {
+    "condition": "sinusoidal",
+    "tasks": 1500,
+    "initially_certified": 1012,
+    "shared_successes": 1363,
+    "timed_only_successes": 14,
+    "static_only_successes": 11,
+    "timed_calls_on_shared_successes": 0.3763756419662509,
+    "static_calls_on_shared_successes": 0.40719002201027144,
+    "timed_latency_on_shared_successes": 0.33110812205251283,
+    "static_latency_on_shared_successes": 0.3567155709127936,
+    "interpretation": "The shared-success subset is selected by both algorithms' outcomes; it is a descriptive diagnostic. Primary cost metrics include all arrivals and all abstentions."
+  },
+  {
+    "condition": "bound_double",
+    "tasks": 1500,
+    "initially_certified": 1016,
+    "shared_successes": 1418,
+    "timed_only_successes": 8,
+    "static_only_successes": 16,
+    "timed_calls_on_shared_successes": 0.4033850493653032,
+    "static_calls_on_shared_successes": 0.42524682651622003,
+    "timed_latency_on_shared_successes": 0.3726570641631752,
+    "static_latency_on_shared_successes": 0.3916200673514523,
+    "interpretation": "The shared-success subset is selected by both algorithms' outcomes; it is a descriptive diagnostic. Primary cost metrics include all arrivals and all abstentions."
+  },
+  {
+    "condition": "bound_fivefold",
+    "tasks": 1500,
+    "initially_certified": 1014,
+    "shared_successes": 1467,
+    "timed_only_successes": 6,
+    "static_only_successes": 15,
+    "timed_calls_on_shared_successes": 0.4294478527607362,
+    "static_calls_on_shared_successes": 0.4437627811860941,
+    "timed_latency_on_shared_successes": 0.3972617637185235,
+    "static_latency_on_shared_successes": 0.4069546931277869,
+    "interpretation": "The shared-success subset is selected by both algorithms' outcomes; it is a descriptive diagnostic. Primary cost metrics include all arrivals and all abstentions."
+  }
+]

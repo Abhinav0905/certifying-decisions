@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Cite this version-specific archive for the code and synthetic results."
+type: software
+title: "Certifying Decisions When Tool Reads Take Time: Code and Synthetic Results"
+authors:
+  - family-names: Abhinav
+    given-names: Kumar
+    orcid: "https://orcid.org/0009-0009-1839-841X"
+version: 1.0.0
+date-released: 2026-11-15
+doi: 10.5281/zenodo.24253199
+url: "https://zenodo.org/records/24253199"
+repository-code: "https://github.com/Abhinav0905/certifying-decisions"
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - decision certification
+  - serial queries
+  - stale observations
+  - synthetic experiments
+  - reproducibility

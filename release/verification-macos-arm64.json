@@ -1,0 +1,1540 @@
+{
+  "status": "archive_and_primary_passed_secondary_drift",
+  "policy_rows": 108000,
+  "tasks": 13500,
+  "absolute_tolerance": 1e-10,
+  "relative_tolerance": 1e-10,
+  "compared_output_files": [
+    "all_raw.csv",
+    "balanced_latency_summary.csv",
+    "bound_double_raw.csv",
+    "bound_fivefold_raw.csv",
+    "configuration.json",
+    "family_plot_summary.csv",
+    "latency_double_raw.csv",
+    "latency_quarter_raw.csv",
+    "main_raw.csv",
+    "paired_seed_intervals.csv",
+    "paired_success_diagnostics.json",
+    "sinusoidal_raw.csv",
+    "stress_plot_summary.csv",
+    "summary.csv",
+    "summary.json",
+    "verification.json"
+  ],
+  "comparison": {
+    "values": 3684146,
+    "max_absolute_numeric_difference": 3.552713678800501e-15
+  },
+  "rerun_differences": [
+    {
+      "file": "all_raw.csv",
+      "row": 1273,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "101",
+        "task": "59",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[1273].final_margin: 0.1420187469349683 != 0.14637960401640027"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 3425,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "104",
+        "task": "28",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[3425].query_order: '3-4-1-2-0' != '1-4-3-2-0'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 3449,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "104",
+        "task": "31",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[3449].final_margin: 0.09798331434071758 != 0.10000145157122825"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 3665,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "104",
+        "task": "58",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[3665].query_order: '1-2-4-0-3' != '1-4-2-0-3'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 5257,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "106",
+        "task": "57",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[5257].query_order: '0-4-3-2' != '0-3-4-2'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 6191,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "107",
+        "task": "73",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[6191].executed: 'True' != 'False'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 6433,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "4",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[6433].query_order: '2-3-4-0-1' != '2-4-3-0-1'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 6833,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "54",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[6833].query_order: '2-3-4-0-1' != '2-4-3-0-1'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 7113,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "89",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[7113].query_order: '1-3-4-2-0' != '1-4-3-2-0'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 8025,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "110",
+        "task": "3",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[8025].final_margin: -0.03923526962117968 != -0.01962349340384996"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 9417,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "111",
+        "task": "77",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[9417].query_order: '2-4-1-0-3' != '1-2-4-0-3'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 9561,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "111",
+        "task": "95",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[9561].query_order: '2-3-4-1-0' != '2-4-3-1-0'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 10713,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "113",
+        "task": "39",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[10713].query_order: '1-4-3-2-0' != '1-3-4-2-0'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 10961,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "113",
+        "task": "70",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[10961].query_order: '2-3-4-1-0' != '3-4-2-1-0'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 11665,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "114",
+        "task": "58",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[11665].query_order: '0-4-2-1-3' != '0-2-4-1-3'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 12377,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "115",
+        "task": "47",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[12377].query_order: '1-4-0-3-2' != '0-1-4-3-2'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 13569,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "116",
+        "task": "96",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[13569].query_order: '0-4-1-3-2' != '0-1-4-3-2'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 13889,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "117",
+        "task": "36",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[13889].query_order: '2-4-3-0' != '2-3-4-0'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 13897,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "117",
+        "task": "37",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[13897].query_order: '0-4-3-1-2' != '0-3-4-1-2'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 15905,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "119",
+        "task": "88",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[15905].query_order: '0-4-3-2-1' != '0-3-4-2-1'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 16799,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "100",
+        "task": "99",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[16799].final_margin: 0.0012242258840715614 != 0.002797592256359449"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 17583,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "101",
+        "task": "97",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[17583].final_margin: 0.07539147855269537 != 0.07633267167418031"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 21591,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "106",
+        "task": "98",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[21591].final_margin: 0.33247953076912984 != 0.4019674482381972"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 23551,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "109",
+        "task": "43",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[23551].commit_time: 1.7954254625018309 != 2.1950720250759894"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 25871,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "112",
+        "task": "33",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[25871].final_margin: -0.1214537043850448 != -0.08491817413557382"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 26879,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "113",
+        "task": "59",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[26879].final_margin: 0.06647533228679525 != 0.13516544372710615"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 28079,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "115",
+        "task": "9",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[28079].commit_time: 2.940465017215786 != 1.6667285246191093"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 35839,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "seed": "104",
+        "task": "79",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[35839].commit_time: 2.4154214016364195 != 3.8427615691119956"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 37591,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "seed": "106",
+        "task": "98",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[37591].commit_time: 2.9737825034687155 != 2.408372353825896"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 37615,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "seed": "107",
+        "task": "1",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[37615].executed: 'False' != 'True'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 44761,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "seed": "115",
+        "task": "95",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[44761].query_order: '0-1-3-4-2' != '1-3-0-4-2'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 45855,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "seed": "117",
+        "task": "31",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[45855].final_margin: -0.017460934901253666 != -0.01685062665631315"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 47743,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "seed": "119",
+        "task": "67",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[47743].final_margin: 0.1568007509582634 != 0.0949359604322707"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 49633,
+      "identity": {
+        "condition": "latency_quarter",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "4",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[49633].query_order: '2-3-4-0-1' != '2-4-3-0-1'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 50097,
+      "identity": {
+        "condition": "latency_quarter",
+        "family": "independent_option",
+        "seed": "110",
+        "task": "12",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[50097].query_order: '1-3-4-0-2' != '3-4-1-0-2'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 55167,
+      "identity": {
+        "condition": "latency_quarter",
+        "family": "dense_shared",
+        "seed": "115",
+        "task": "20",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[55167].final_margin: -0.05705110918034906 != -0.05382991663299952"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 61633,
+      "identity": {
+        "condition": "latency_double",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "4",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[61633].final_margin: -0.10377015496823927 != -0.07652714038640285"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 62097,
+      "identity": {
+        "condition": "latency_double",
+        "family": "independent_option",
+        "seed": "110",
+        "task": "12",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[62097].query_order: '1-3-4-0-2' != '3-4-1-0-2'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 62945,
+      "identity": {
+        "condition": "latency_double",
+        "family": "independent_option",
+        "seed": "114",
+        "task": "18",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[62945].commit_time: 7.578254909168686 != 6.476379152609361"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 73633,
+      "identity": {
+        "condition": "sinusoidal",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "4",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[73633].query_order: '2-3-4-0-1' != '2-4-3-0-1'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 79079,
+      "identity": {
+        "condition": "sinusoidal",
+        "family": "dense_shared",
+        "seed": "115",
+        "task": "9",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[79079].final_margin: 0.0691761344919079 != 0.0697080362219259"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 85633,
+      "identity": {
+        "condition": "bound_double",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "4",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[85633].query_order: '2-3-4-0-1' != '2-4-3-0-1'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 86025,
+      "identity": {
+        "condition": "bound_double",
+        "family": "independent_option",
+        "seed": "110",
+        "task": "3",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[86025].final_margin: -0.017215816921722804 != -0.07215677747779223"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 91079,
+      "identity": {
+        "condition": "bound_double",
+        "family": "dense_shared",
+        "seed": "115",
+        "task": "9",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[91079].commit_time: 2.940465017215786 != 3.157165758442511"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 93415,
+      "identity": {
+        "condition": "bound_double",
+        "family": "sparse_mixed",
+        "seed": "107",
+        "task": "1",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[93415].commit_time: 2.5128421995847328 != 3.012622048562398"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 98401,
+      "identity": {
+        "condition": "bound_fivefold",
+        "family": "independent_option",
+        "seed": "112",
+        "task": "0",
+        "method": "full_order"
+      },
+      "first_difference": "all_raw.csv[98401].query_order: '2-3-4-1' != '2-4-3-1'"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 106983,
+      "identity": {
+        "condition": "bound_fivefold",
+        "family": "sparse_mixed",
+        "seed": "114",
+        "task": "22",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[106983].commit_time: 0.8924455518261502 != 1.021464121632211"
+    },
+    {
+      "file": "all_raw.csv",
+      "row": 107503,
+      "identity": {
+        "condition": "bound_fivefold",
+        "family": "sparse_mixed",
+        "seed": "117",
+        "task": "12",
+        "method": "timed_h3"
+      },
+      "first_difference": "all_raw.csv[107503].commit_time: 5.7018106446841195 != 3.2064238094847117"
+    },
+    {
+      "file": "balanced_latency_summary.csv",
+      "row": 5,
+      "identity": {
+        "condition": "latency_double",
+        "method": "full_order",
+        "metric": "latency"
+      },
+      "first_difference": "balanced_latency_summary.csv[5].seed_mean: 3.023555658712326 != 3.02282107487462"
+    },
+    {
+      "file": "bound_double_raw.csv",
+      "row": 1633,
+      "identity": {
+        "condition": "bound_double",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "4",
+        "method": "full_order"
+      },
+      "first_difference": "bound_double_raw.csv[1633].query_order: '2-3-4-0-1' != '2-4-3-0-1'"
+    },
+    {
+      "file": "bound_double_raw.csv",
+      "row": 2025,
+      "identity": {
+        "condition": "bound_double",
+        "family": "independent_option",
+        "seed": "110",
+        "task": "3",
+        "method": "full_order"
+      },
+      "first_difference": "bound_double_raw.csv[2025].final_margin: -0.017215816921722804 != -0.07215677747779223"
+    },
+    {
+      "file": "bound_double_raw.csv",
+      "row": 7079,
+      "identity": {
+        "condition": "bound_double",
+        "family": "dense_shared",
+        "seed": "115",
+        "task": "9",
+        "method": "timed_h3"
+      },
+      "first_difference": "bound_double_raw.csv[7079].commit_time: 2.940465017215786 != 3.157165758442511"
+    },
+    {
+      "file": "bound_double_raw.csv",
+      "row": 9415,
+      "identity": {
+        "condition": "bound_double",
+        "family": "sparse_mixed",
+        "seed": "107",
+        "task": "1",
+        "method": "timed_h3"
+      },
+      "first_difference": "bound_double_raw.csv[9415].commit_time: 2.5128421995847328 != 3.012622048562398"
+    },
+    {
+      "file": "bound_fivefold_raw.csv",
+      "row": 2401,
+      "identity": {
+        "condition": "bound_fivefold",
+        "family": "independent_option",
+        "seed": "112",
+        "task": "0",
+        "method": "full_order"
+      },
+      "first_difference": "bound_fivefold_raw.csv[2401].query_order: '2-3-4-1' != '2-4-3-1'"
+    },
+    {
+      "file": "bound_fivefold_raw.csv",
+      "row": 10983,
+      "identity": {
+        "condition": "bound_fivefold",
+        "family": "sparse_mixed",
+        "seed": "114",
+        "task": "22",
+        "method": "timed_h3"
+      },
+      "first_difference": "bound_fivefold_raw.csv[10983].commit_time: 0.8924455518261502 != 1.021464121632211"
+    },
+    {
+      "file": "bound_fivefold_raw.csv",
+      "row": 11503,
+      "identity": {
+        "condition": "bound_fivefold",
+        "family": "sparse_mixed",
+        "seed": "117",
+        "task": "12",
+        "method": "timed_h3"
+      },
+      "first_difference": "bound_fivefold_raw.csv[11503].commit_time: 5.7018106446841195 != 3.2064238094847117"
+    },
+    {
+      "file": "latency_double_raw.csv",
+      "row": 1633,
+      "identity": {
+        "condition": "latency_double",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "4",
+        "method": "full_order"
+      },
+      "first_difference": "latency_double_raw.csv[1633].final_margin: -0.10377015496823927 != -0.07652714038640285"
+    },
+    {
+      "file": "latency_double_raw.csv",
+      "row": 2097,
+      "identity": {
+        "condition": "latency_double",
+        "family": "independent_option",
+        "seed": "110",
+        "task": "12",
+        "method": "full_order"
+      },
+      "first_difference": "latency_double_raw.csv[2097].query_order: '1-3-4-0-2' != '3-4-1-0-2'"
+    },
+    {
+      "file": "latency_double_raw.csv",
+      "row": 2945,
+      "identity": {
+        "condition": "latency_double",
+        "family": "independent_option",
+        "seed": "114",
+        "task": "18",
+        "method": "full_order"
+      },
+      "first_difference": "latency_double_raw.csv[2945].commit_time: 7.578254909168686 != 6.476379152609361"
+    },
+    {
+      "file": "latency_quarter_raw.csv",
+      "row": 1633,
+      "identity": {
+        "condition": "latency_quarter",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "4",
+        "method": "full_order"
+      },
+      "first_difference": "latency_quarter_raw.csv[1633].query_order: '2-3-4-0-1' != '2-4-3-0-1'"
+    },
+    {
+      "file": "latency_quarter_raw.csv",
+      "row": 2097,
+      "identity": {
+        "condition": "latency_quarter",
+        "family": "independent_option",
+        "seed": "110",
+        "task": "12",
+        "method": "full_order"
+      },
+      "first_difference": "latency_quarter_raw.csv[2097].query_order: '1-3-4-0-2' != '3-4-1-0-2'"
+    },
+    {
+      "file": "latency_quarter_raw.csv",
+      "row": 7167,
+      "identity": {
+        "condition": "latency_quarter",
+        "family": "dense_shared",
+        "seed": "115",
+        "task": "20",
+        "method": "timed_h3"
+      },
+      "first_difference": "latency_quarter_raw.csv[7167].final_margin: -0.05705110918034906 != -0.05382991663299952"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 1273,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "101",
+        "task": "59",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[1273].final_margin: 0.1420187469349683 != 0.14637960401640027"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 3425,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "104",
+        "task": "28",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[3425].query_order: '3-4-1-2-0' != '1-4-3-2-0'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 3449,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "104",
+        "task": "31",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[3449].final_margin: 0.09798331434071758 != 0.10000145157122825"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 3665,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "104",
+        "task": "58",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[3665].query_order: '1-2-4-0-3' != '1-4-2-0-3'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 5257,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "106",
+        "task": "57",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[5257].query_order: '0-4-3-2' != '0-3-4-2'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 6191,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "107",
+        "task": "73",
+        "method": "timed_h3"
+      },
+      "first_difference": "main_raw.csv[6191].executed: 'True' != 'False'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 6433,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "4",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[6433].query_order: '2-3-4-0-1' != '2-4-3-0-1'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 6833,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "54",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[6833].query_order: '2-3-4-0-1' != '2-4-3-0-1'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 7113,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "89",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[7113].query_order: '1-3-4-2-0' != '1-4-3-2-0'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 8025,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "110",
+        "task": "3",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[8025].final_margin: -0.03923526962117968 != -0.01962349340384996"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 9417,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "111",
+        "task": "77",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[9417].query_order: '2-4-1-0-3' != '1-2-4-0-3'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 9561,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "111",
+        "task": "95",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[9561].query_order: '2-3-4-1-0' != '2-4-3-1-0'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 10713,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "113",
+        "task": "39",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[10713].query_order: '1-4-3-2-0' != '1-3-4-2-0'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 10961,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "113",
+        "task": "70",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[10961].query_order: '2-3-4-1-0' != '3-4-2-1-0'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 11665,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "114",
+        "task": "58",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[11665].query_order: '0-4-2-1-3' != '0-2-4-1-3'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 12377,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "115",
+        "task": "47",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[12377].query_order: '1-4-0-3-2' != '0-1-4-3-2'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 13569,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "116",
+        "task": "96",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[13569].query_order: '0-4-1-3-2' != '0-1-4-3-2'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 13889,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "117",
+        "task": "36",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[13889].query_order: '2-4-3-0' != '2-3-4-0'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 13897,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "117",
+        "task": "37",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[13897].query_order: '0-4-3-1-2' != '0-3-4-1-2'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 15905,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "seed": "119",
+        "task": "88",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[15905].query_order: '0-4-3-2-1' != '0-3-4-2-1'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 16799,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "100",
+        "task": "99",
+        "method": "timed_h3"
+      },
+      "first_difference": "main_raw.csv[16799].final_margin: 0.0012242258840715614 != 0.002797592256359449"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 17583,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "101",
+        "task": "97",
+        "method": "timed_h3"
+      },
+      "first_difference": "main_raw.csv[17583].final_margin: 0.07539147855269537 != 0.07633267167418031"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 21591,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "106",
+        "task": "98",
+        "method": "timed_h3"
+      },
+      "first_difference": "main_raw.csv[21591].final_margin: 0.33247953076912984 != 0.4019674482381972"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 23551,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "109",
+        "task": "43",
+        "method": "timed_h3"
+      },
+      "first_difference": "main_raw.csv[23551].commit_time: 1.7954254625018309 != 2.1950720250759894"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 25871,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "112",
+        "task": "33",
+        "method": "timed_h3"
+      },
+      "first_difference": "main_raw.csv[25871].final_margin: -0.1214537043850448 != -0.08491817413557382"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 26879,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "113",
+        "task": "59",
+        "method": "timed_h3"
+      },
+      "first_difference": "main_raw.csv[26879].final_margin: 0.06647533228679525 != 0.13516544372710615"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 28079,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "seed": "115",
+        "task": "9",
+        "method": "timed_h3"
+      },
+      "first_difference": "main_raw.csv[28079].commit_time: 2.940465017215786 != 1.6667285246191093"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 35839,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "seed": "104",
+        "task": "79",
+        "method": "timed_h3"
+      },
+      "first_difference": "main_raw.csv[35839].commit_time: 2.4154214016364195 != 3.8427615691119956"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 37591,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "seed": "106",
+        "task": "98",
+        "method": "timed_h3"
+      },
+      "first_difference": "main_raw.csv[37591].commit_time: 2.9737825034687155 != 2.408372353825896"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 37615,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "seed": "107",
+        "task": "1",
+        "method": "timed_h3"
+      },
+      "first_difference": "main_raw.csv[37615].executed: 'False' != 'True'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 44761,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "seed": "115",
+        "task": "95",
+        "method": "full_order"
+      },
+      "first_difference": "main_raw.csv[44761].query_order: '0-1-3-4-2' != '1-3-0-4-2'"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 45855,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "seed": "117",
+        "task": "31",
+        "method": "timed_h3"
+      },
+      "first_difference": "main_raw.csv[45855].final_margin: -0.017460934901253666 != -0.01685062665631315"
+    },
+    {
+      "file": "main_raw.csv",
+      "row": 47743,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "seed": "119",
+        "task": "67",
+        "method": "timed_h3"
+      },
+      "first_difference": "main_raw.csv[47743].final_margin: 0.1568007509582634 != 0.0949359604322707"
+    },
+    {
+      "file": "paired_seed_intervals.csv",
+      "row": 131,
+      "identity": {
+        "condition": "latency_double",
+        "family": "independent_option",
+        "baseline": "full_order",
+        "metric": "calls_per_arrival"
+      },
+      "first_difference": "paired_seed_intervals.csv[131].difference: -0.6480000000000001 != -0.6460000000000001"
+    },
+    {
+      "file": "paired_seed_intervals.csv",
+      "row": 132,
+      "identity": {
+        "condition": "latency_double",
+        "family": "independent_option",
+        "baseline": "full_order",
+        "metric": "latency_per_arrival"
+      },
+      "first_difference": "paired_seed_intervals.csv[132].difference: -1.3387759070639897 != -1.3365721555508707"
+    },
+    {
+      "file": "paired_seed_intervals.csv",
+      "row": 133,
+      "identity": {
+        "condition": "latency_double",
+        "family": "independent_option",
+        "baseline": "full_order",
+        "metric": "total_calls_per_certificate"
+      },
+      "first_difference": "paired_seed_intervals.csv[133].difference: -0.7174576039902127 != -0.7151848767174853"
+    },
+    {
+      "file": "paired_seed_intervals.csv",
+      "row": 134,
+      "identity": {
+        "condition": "latency_double",
+        "family": "independent_option",
+        "baseline": "full_order",
+        "metric": "total_latency_per_certificate"
+      },
+      "first_difference": "paired_seed_intervals.csv[134].difference: -1.4839208986804264 != -1.4814166355973373"
+    },
+    {
+      "file": "paired_seed_intervals.csv",
+      "row": 176,
+      "identity": {
+        "condition": "latency_double",
+        "family": "all",
+        "baseline": "full_order",
+        "metric": "calls_per_arrival"
+      },
+      "first_difference": "paired_seed_intervals.csv[176].difference: -1.0000000000000002 != -0.9993333333333334"
+    },
+    {
+      "file": "paired_seed_intervals.csv",
+      "row": 177,
+      "identity": {
+        "condition": "latency_double",
+        "family": "all",
+        "baseline": "full_order",
+        "metric": "latency_per_arrival"
+      },
+      "first_difference": "paired_seed_intervals.csv[177].difference: -2.143836647455708 != -2.1431020636180023"
+    },
+    {
+      "file": "paired_seed_intervals.csv",
+      "row": 178,
+      "identity": {
+        "condition": "latency_double",
+        "family": "all",
+        "baseline": "full_order",
+        "metric": "total_calls_per_certificate"
+      },
+      "first_difference": "paired_seed_intervals.csv[178].difference: -1.1742566695686407 != -1.173409211941522"
+    },
+    {
+      "file": "paired_seed_intervals.csv",
+      "row": 179,
+      "identity": {
+        "condition": "latency_double",
+        "family": "all",
+        "baseline": "full_order",
+        "metric": "total_latency_per_certificate"
+      },
+      "first_difference": "paired_seed_intervals.csv[179].difference: -2.519924240519676 != -2.5189904475056415"
+    },
+    {
+      "file": "sinusoidal_raw.csv",
+      "row": 1633,
+      "identity": {
+        "condition": "sinusoidal",
+        "family": "independent_option",
+        "seed": "108",
+        "task": "4",
+        "method": "full_order"
+      },
+      "first_difference": "sinusoidal_raw.csv[1633].query_order: '2-3-4-0-1' != '2-4-3-0-1'"
+    },
+    {
+      "file": "sinusoidal_raw.csv",
+      "row": 7079,
+      "identity": {
+        "condition": "sinusoidal",
+        "family": "dense_shared",
+        "seed": "115",
+        "task": "9",
+        "method": "timed_h3"
+      },
+      "first_difference": "sinusoidal_raw.csv[7079].final_margin: 0.0691761344919079 != 0.0697080362219259"
+    },
+    {
+      "file": "summary.csv",
+      "row": 14,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.csv[14].executed: 1921.0 != 1920.0"
+    },
+    {
+      "file": "summary.csv",
+      "row": 15,
+      "identity": {
+        "condition": "main",
+        "family": "all",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.csv[15].calls_per_arrival: 0.6418333333333334 != 0.642"
+    },
+    {
+      "file": "summary.csv",
+      "row": 23,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.csv[23].calls_per_arrival: 0.7475 != 0.747"
+    },
+    {
+      "file": "summary.csv",
+      "row": 31,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.csv[31].executed: 1790.0 != 1791.0"
+    },
+    {
+      "file": "summary.csv",
+      "row": 66,
+      "identity": {
+        "condition": "latency_double",
+        "family": "independent_option",
+        "method": "full_order"
+      },
+      "first_difference": "summary.csv[66].calls_per_arrival: 0.93 != 0.928"
+    },
+    {
+      "file": "summary.csv",
+      "row": 67,
+      "identity": {
+        "condition": "latency_double",
+        "family": "all",
+        "method": "full_order"
+      },
+      "first_difference": "summary.csv[67].calls_per_arrival: 1.492 != 1.4913333333333334"
+    },
+    {
+      "file": "summary.csv",
+      "row": 143,
+      "identity": {
+        "condition": "bound_double",
+        "family": "all",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.csv[143].latency_per_arrival: 0.5244095014266691 != 0.5248871551534721"
+    },
+    {
+      "file": "summary.csv",
+      "row": 151,
+      "identity": {
+        "condition": "bound_double",
+        "family": "dense_shared",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.csv[151].latency_per_arrival: 0.6039795063459054 != 0.6044129078283588"
+    },
+    {
+      "file": "summary.csv",
+      "row": 159,
+      "identity": {
+        "condition": "bound_double",
+        "family": "sparse_mixed",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.csv[159].latency_per_arrival: 0.6514696405398763 != 0.6524692002378317"
+    },
+    {
+      "file": "summary.csv",
+      "row": 175,
+      "identity": {
+        "condition": "bound_fivefold",
+        "family": "all",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.csv[175].calls_per_arrival: 0.49 != 0.4886666666666667"
+    },
+    {
+      "file": "summary.csv",
+      "row": 191,
+      "identity": {
+        "condition": "bound_fivefold",
+        "family": "sparse_mixed",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.csv[191].calls_per_arrival: 0.608 != 0.604"
+    },
+    {
+      "file": "summary.json",
+      "row": 14,
+      "identity": {
+        "condition": "main",
+        "family": "independent_option",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.json[14].executed"
+    },
+    {
+      "file": "summary.json",
+      "row": 15,
+      "identity": {
+        "condition": "main",
+        "family": "all",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.json[15].calls_per_arrival: 0.6418333333333334 != 0.642"
+    },
+    {
+      "file": "summary.json",
+      "row": 23,
+      "identity": {
+        "condition": "main",
+        "family": "dense_shared",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.json[23].calls_per_arrival: 0.7475 != 0.747"
+    },
+    {
+      "file": "summary.json",
+      "row": 31,
+      "identity": {
+        "condition": "main",
+        "family": "sparse_mixed",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.json[31].executed"
+    },
+    {
+      "file": "summary.json",
+      "row": 66,
+      "identity": {
+        "condition": "latency_double",
+        "family": "independent_option",
+        "method": "full_order"
+      },
+      "first_difference": "summary.json[66].calls_per_arrival: 0.93 != 0.928"
+    },
+    {
+      "file": "summary.json",
+      "row": 67,
+      "identity": {
+        "condition": "latency_double",
+        "family": "all",
+        "method": "full_order"
+      },
+      "first_difference": "summary.json[67].calls_per_arrival: 1.492 != 1.4913333333333334"
+    },
+    {
+      "file": "summary.json",
+      "row": 143,
+      "identity": {
+        "condition": "bound_double",
+        "family": "all",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.json[143].latency_per_arrival: 0.5244095014266691 != 0.5248871551534721"
+    },
+    {
+      "file": "summary.json",
+      "row": 151,
+      "identity": {
+        "condition": "bound_double",
+        "family": "dense_shared",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.json[151].latency_per_arrival: 0.6039795063459054 != 0.6044129078283588"
+    },
+    {
+      "file": "summary.json",
+      "row": 159,
+      "identity": {
+        "condition": "bound_double",
+        "family": "sparse_mixed",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.json[159].latency_per_arrival: 0.6514696405398763 != 0.6524692002378317"
+    },
+    {
+      "file": "summary.json",
+      "row": 175,
+      "identity": {
+        "condition": "bound_fivefold",
+        "family": "all",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.json[175].calls_per_arrival: 0.49 != 0.4886666666666667"
+    },
+    {
+      "file": "summary.json",
+      "row": 191,
+      "identity": {
+        "condition": "bound_fivefold",
+        "family": "sparse_mixed",
+        "method": "timed_h3"
+      },
+      "first_difference": "summary.json[191].calls_per_arrival: 0.608 != 0.604"
+    }
+  ],
+  "unexpected_difference_count": 0,
+  "secondary_drift_allowed": true,
+  "original_results_replay": {
+    "rows": 108000,
+    "episodes": 13500,
+    "interval_rows": 360,
+    "maximum_margin_error": 1.7763568394002505e-15,
+    "maximum_regret_error": 1.9984014443252818e-15,
+    "maximum_selected_summary_error": 0.0,
+    "maximum_interval_error": 4.440892098500626e-16,
+    "source_hash_matches": true,
+    "source_sha256": "aa6142fafd5c4ac77b8fea9d2a4169e269f190de94d53bc1119fd4bfda1db444",
+    "initially_certified": 3936,
+    "common_certificates": 5452,
+    "matched_subset": {
+      "calls": {
+        "timed_h2": 0.41434336023477625,
+        "static_h2": 0.4387380777696258,
+        "relative_reduction": 0.05560200668896309
+      },
+      "tool_latency": {
+        "timed_h2": 0.37385977830469286,
+        "static_h2": 0.3923082584561446,
+        "relative_reduction": 0.047025469777394635
+      }
+    },
+    "timed_only_certificates": 17,
+    "static_only_certificates": 44
+  },
+  "experiment_sha256": "aa6142fafd5c4ac77b8fea9d2a4169e269f190de94d53bc1119fd4bfda1db444",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "scope": "Full rerun of the supplied simulator, exact row inventory, numeric output comparisons and separate arithmetic replay. Not an independent simulator implementation or external peer review.",
+  "figures": "All six figure files regenerated; plotted numeric summaries compared. Image bytes are not required to match across platforms."
+}

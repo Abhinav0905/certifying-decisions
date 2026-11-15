@@ -1,0 +1,8 @@
+{
+  "script_sha256": "aa6142fafd5c4ac77b8fea9d2a4169e269f190de94d53bc1119fd4bfda1db444",
+  "numpy_version": "2.3.5",
+  "wall_seconds": 11.015136521000386,
+  "tasks": 13500,
+  "policy_evaluations": 108000,
+  "actual_data": "all values in raw CSVs were computed by this run; no external data, model API, or private source was used"
+}

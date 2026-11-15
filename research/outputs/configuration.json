@@ -1,0 +1,125 @@
+{
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119
+  ],
+  "main_tasks_per_seed_per_family": 100,
+  "supplement_tasks_per_seed_per_family": 25,
+  "sources": 5,
+  "actions": 4,
+  "families": [
+    "independent_option",
+    "dense_shared",
+    "sparse_mixed"
+  ],
+  "initial_age_uniform": [
+    0.0,
+    8.0
+  ],
+  "velocity_bound_uniform": [
+    0.03,
+    0.15
+  ],
+  "query_latency_uniform": [
+    0.2,
+    1.8
+  ],
+  "nominal_gap_uniform": [
+    0.1,
+    1.5
+  ],
+  "commit_gap": 0.5,
+  "deadline": 12.0,
+  "ttl_age_threshold": 3.0,
+  "certificate_tolerance": 1e-10,
+  "evaluation_tolerance": 1e-08,
+  "query_limit": "at most once per source per episode",
+  "coefficient_normalization": "each action row has L1 norm 1",
+  "dense_weights": "independent standard normal entries, row L1 normalization",
+  "independent_weights": "own source coefficient 0.5; fifth shared source coefficient 0.5",
+  "sparse_weights": "two distinct sources per action, normal entries, row L1 normalization",
+  "initial_state": "independent standard normal coordinates",
+  "motion": "x0_i + bound_i * rho_i * t; rho uniform[-1,1]",
+  "sinusoidal_motion": "x0_i + bound_i*rho_i/omega_i*(sin(omega_i*t+phase_i)-sin(phase_i)); omega uniform[0.12,0.65], phase uniform[0,2*pi]",
+  "offset_construction": "random target action offset makes its cached-center advantage over every competitor at least sampled gap, with exactly one competitor at sampled gap",
+  "forecast": "keep cached centers fixed, update all timestamps under serial completions and actual commit gap; replan after one returned observation",
+  "static_forecast_ablation": "same horizon-2 search, but records unqueried by a forecast sequence keep their current age plus commit gap; queried records age through later forecast queries",
+  "full_order": "maximize minimum final forecast margin among all full permutations; break ties lexicographically; execute this fixed order with correct gate after every return; skip reads that cannot fit deadline",
+  "ttl": "initial age > 3, increasing source-index order; correct gate after every return; skip infeasible reads",
+  "weighted_age": "max competitor coefficient contrast * stated bound * current age / query latency; among feasible unqueried sources",
+  "oldest_first": "greatest current age among feasible unqueried sources; index tie break",
+  "conditions": [
+    {
+      "name": "main",
+      "motion": "linear",
+      "latency_multiplier": 1.0,
+      "actual_bound_multiplier": 1.0,
+      "tasks": 100
+    },
+    {
+      "name": "latency_quarter",
+      "motion": "linear",
+      "latency_multiplier": 0.25,
+      "actual_bound_multiplier": 1.0,
+      "tasks": 25
+    },
+    {
+      "name": "latency_double",
+      "motion": "linear",
+      "latency_multiplier": 2.0,
+      "actual_bound_multiplier": 1.0,
+      "tasks": 25
+    },
+    {
+      "name": "sinusoidal",
+      "motion": "sinusoidal",
+      "latency_multiplier": 1.0,
+      "actual_bound_multiplier": 1.0,
+      "tasks": 25
+    },
+    {
+      "name": "bound_double",
+      "motion": "linear",
+      "latency_multiplier": 1.0,
+      "actual_bound_multiplier": 2.0,
+      "tasks": 25
+    },
+    {
+      "name": "bound_fivefold",
+      "motion": "linear",
+      "latency_multiplier": 1.0,
+      "actual_bound_multiplier": 5.0,
+      "tasks": 25
+    }
+  ],
+  "methods": [
+    "ungated_no_refresh",
+    "full_order",
+    "ttl",
+    "weighted_age",
+    "oldest_first",
+    "static_h2",
+    "timed_h2",
+    "timed_h3"
+  ],
+  "confidence_intervals": "paired seed-level differences, Student t 95% CI, 20 independent seeds; no multiple-comparison correction",
+  "study_status": "synthetic computational experiment; not a production benchmark or an evaluation of LLM extraction"
+}

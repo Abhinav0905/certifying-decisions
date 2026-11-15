@@ -1,0 +1,58 @@
+{
+  "corner_comparisons": 1500,
+  "maximum_absolute_error": 2.6645352591003757e-15,
+  "two_step_check": {
+    "initial_margin": -0.25,
+    "one_query_margins": [
+      -0.35,
+      -0.35
+    ],
+    "two_query_margins": [
+      0.04999999999999993,
+      0.04999999999999993
+    ],
+    "selected_first_query": 0,
+    "purpose": "A two-query improvement is not discarded when both immediate one-query gains are negative."
+  },
+  "two_source_counterexample": {
+    "y": [
+      0.2,
+      0.8
+    ],
+    "timestamps": [
+      -8.0,
+      -2.0
+    ],
+    "bounds": [
+      0.1,
+      0.2
+    ],
+    "W": [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "b": [
+      0.0,
+      0.0
+    ],
+    "query_source": 0,
+    "query_latency": 5.0,
+    "commit_gap": 0.5,
+    "initial_minimum_margin": -0.3500000000000001,
+    "frozen_age_forecast_margin": 0.44999999999999996,
+    "correct_forecast_margin": -0.55,
+    "actual_commit_time": 5.5,
+    "actual_commit_state": [
+      0.2,
+      -0.7
+    ],
+    "actual_utility_advantage_of_nominal_action": -0.49999999999999994,
+    "true_motion": "source 0 constant .2; source 1 .8 - .2*(t+2)"
+  }
+}

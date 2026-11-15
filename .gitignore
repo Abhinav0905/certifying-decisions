@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.release-work/
+dist/
+manuscript/
+reviewer_notes.txt
+README.txt
+MANIFEST_SHA256.txt
